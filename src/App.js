@@ -33,13 +33,12 @@ class App extends Component {
 
   render() {
     const { posts } = this.state;
-    const key = 0;
     return (
       <Fragment>
         <Header title="devxbook" />
         <ul>
           {posts.map(post => (
-            <li key={post.author + key}><Post post={post} /></li>
+            <li key={post.author}><Post post={post} /></li>
           ))}
         </ul>
       </Fragment>
